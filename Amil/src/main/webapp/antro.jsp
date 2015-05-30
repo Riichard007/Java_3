@@ -13,5 +13,15 @@
     </head>
     <body>
         <h1>Bienvenido a nuestra página de recomendaciones!</h1>
+        <form action = "recomendar" method = "GET">
+            <p>Escoge una bebida:</p>
+                <select name = "Bebida">
+                    <option>Cerveza</option>
+                    <option>Vodka</option>
+                    <option>Vino</option>
+                    <option>Whisky</option>
+                </select><br><br>
+                <input type = "submit" value = "Ver recomendaciones">
+        </form>                
     </body>
 </html>

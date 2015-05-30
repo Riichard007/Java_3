@@ -5,9 +5,18 @@
         <servlet-name>Servilleta</servlet-name>
         <servlet-class>com.unitec.amil.ServletAutenticar</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletRecomendarBebidas</servlet-name>
+        <servlet-class>unitec.bebidas.controller.ServletRecomendarBebidas</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Servilleta</servlet-name>
         <url-pattern>/autenticar</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletRecomendarBebidas</servlet-name>
+        <url-pattern>/recomendar</url-pattern>
+        <url-pattern>/recomendacion</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
