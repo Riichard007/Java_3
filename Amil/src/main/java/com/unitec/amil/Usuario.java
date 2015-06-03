@@ -1,3 +1,17 @@
+/*
+Hibernate
+4.- Crear el archivo de configuración de Hibernate
+    *Se maneja la conexión a la base de datos
+    *El dialecto de la base de datos (servidor)
+    *El manejo de sesión
+    *Las clases mapeadas
+    *Las credenciales de autenticación
+
+5.- Crear la clase para el manejo de sesión
+
+6.- Cargar el driver de MySQL como dependencia de Maven
+*/
+
 package com.unitec.amil;
 
 import java.io.Serializable;
