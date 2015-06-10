@@ -12,16 +12,16 @@ public class TestPojos {
         
         System.out.println("Vamos a probar todas las operaciones SQL");
         
-        //1° paso: Crear el SessionFactory        
+        //1Â° paso: Crear el SessionFactory        
         SessionFactory factory = HibernateUtilidades.getSessionFactory();
-        
-        //2° paso: Obtenemos la apertura de sesión actual
+                
+        //2Â° paso: Obtenemos la apertura de sesiÃ³n actual
         Session sesion = factory.openSession();
         
-        //3° paso: Creamos la transacción
+        //3Â° paso: Creamos la transacciÃ³n
         Transaction tranza = sesion.beginTransaction();
-        /*
-        //4° paso: Nos apuramos a hacer una transacción
+        
+        //4Â° paso: Nos apuramos a hacer una transacciÃ³n
         //ESTE ES UN INSERT
         Usuario u = new Usuario();
         u.setEmail("rs.amil@outlook.com");
@@ -29,8 +29,10 @@ public class TestPojos {
         u.setLogin("Amil");
         u.setPassword("hola123");
         sesion.save(u);
-        
-        //Liberar la transacción y cerrar la sesión
+        tranza.commit();
+        sesion.close();
+        /*
+        //Liberar la transacciÃ³n y cerrar la sesiÃ³n
         tranza.commit();
         sesion.close();
         */
@@ -46,7 +48,7 @@ public class TestPojos {
         sesion.update(u);
         tranza.commit();
         sesion.close();
-        System.out.println("Registro actualizado con éxito");
+        System.out.println("Registro actualizado con Ã©xito");
         */
         
         /*
@@ -55,14 +57,15 @@ public class TestPojos {
         tranza.commit();
         sesion.close();
         System.out.println("El usuario elegido se llama: " + u.getNombre());
-        */
+        
         
         List<Usuario> usuarios = sesion.createCriteria(Usuario.class).list();
         tranza.commit();
         sesion.close();
         for(Usuario usu:usuarios){
         System.out.println("Usuarios encontrados: " + usu.getNombre());
-        }
+                
+        }*/
     }
     
 }

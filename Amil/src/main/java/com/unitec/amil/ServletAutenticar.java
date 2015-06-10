@@ -10,8 +10,8 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ServletAutenticar extends HttpServlet {
     /*
-    request - entra la información
-    response - sale la información
+    request - entra la informaciÃ³n
+    response - sale la informaciÃ³n
     */
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

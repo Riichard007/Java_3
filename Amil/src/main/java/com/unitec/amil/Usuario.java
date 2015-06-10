@@ -1,13 +1,13 @@
 /*
 Hibernate
-4.- Crear el archivo de configuraci髇 de Hibernate
-    *Se maneja la conexi髇 a la base de datos
+4.- Crear el archivo de configuraci贸n de Hibernate
+    *Se maneja la conexi贸n a la base de datos
     *El dialecto de la base de datos (servidor)
-    *El manejo de sesi髇
+    *El manejo de sesi贸n
     *Las clases mapeadas
-    *Las credenciales de autenticaci髇
+    *Las credenciales de autenticaci贸n
 
-5.- Crear la clase para el manejo de sesi髇
+5.- Crear la clase para el manejo de sesi贸n
 
 6.- Cargar el driver de MySQL como dependencia de Maven
 */
@@ -26,7 +26,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "usuario")
+@Table(name = "Usuario")
 public class Usuario implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
