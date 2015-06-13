@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Elite-Technologies</title>
     </head>
     <body>
         <h1>Ingresa tus datos:</h1>
@@ -14,14 +14,14 @@
         Es un scriptlet
         Inicia el formuliario
         -->
-        <% 
+        <%-- 
             int edad = 20;
             out.println("Tu edad es: " + edad);
-        %>
+        --%>        
         <form action="autenticar" method="post">
             <br>Login<br>
-            <input type="text" name="login"><br>
-            Password<br>
+            <input type="text" name="login">
+            <br>Password<br>
             <input type="password" name="password"><br>
             <input type="submit" value="ingresar"><br>
         </form>

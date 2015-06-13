@@ -33,7 +33,8 @@ public class DAOUsuario {
     
     //Creamos el UPDATE
     public void actualizar(Usuario u) throws Exception{
-        
+        session.update(u);
+        cerrarTodo();
     }
     
     //Creamos el buscarTodos

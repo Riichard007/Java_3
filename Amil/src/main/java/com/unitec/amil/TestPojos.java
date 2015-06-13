@@ -24,13 +24,17 @@ public class TestPojos {
         //4° paso: Nos apuramos a hacer una transacción
         //ESTE ES UN INSERT
         Usuario u = new Usuario();
-        u.setEmail("rs.amil@outlook.com");
-        u.setNombre("Ricardo");
-        u.setLogin("Amil");
+        u.setEmail("elite.technologies@outlook.com");
+        u.setNombre("Manolo");
+        u.setLogin("Manolo");
         u.setPassword("hola123");
-        sesion.save(u);
+        
+        DAOUsuario daou = new DAOUsuario();
+        daou.guardar(u);
+        
+        /*sesion.save(u);
         tranza.commit();
-        sesion.close();
+        sesion.close();*/
         /*
         //Liberar la transacción y cerrar la sesión
         tranza.commit();
