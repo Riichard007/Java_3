@@ -1,20 +1,12 @@
 /*
-Hibernate
-4.- Crear el archivo de configuración de Hibernate
-    *Se maneja la conexión a la base de datos
-    *El dialecto de la base de datos (servidor)
-    *El manejo de sesión
-    *Las clases mapeadas
-    *Las credenciales de autenticación
-
-5.- Crear la clase para el manejo de sesión
-
-6.- Cargar el driver de MySQL como dependencia de Maven
-*/
-
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package com.unitec.amil;
 
 import java.io.Serializable;
+import java.util.Collection;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,17 +15,24 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+/**
+ *
+ * @author amil
+ */
 @Entity
 @Table(name = "Usuario")
+@NamedQueries({
+    @NamedQuery(name = "Usuario.findAll", query = "SELECT u FROM Usuario u")})
 public class Usuario implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
-    @Column(name = "ID")
-    private Integer id;
+    @Column(name = "ID_USUARIO")
+    private Integer idUsuario;
     @Column(name = "NOMBRE")
     private String nombre;
     @Column(name = "EMAIL")
@@ -46,16 +45,16 @@ public class Usuario implements Serializable {
     public Usuario() {
     }
 
-    public Usuario(Integer id) {
-        this.id = id;
+    public Usuario(Integer idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setIdUsuario(Integer idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getNombre() {
@@ -93,7 +92,7 @@ public class Usuario implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
+        hash += (idUsuario != null ? idUsuario.hashCode() : 0);
         return hash;
     }
 
@@ -104,7 +103,7 @@ public class Usuario implements Serializable {
             return false;
         }
         Usuario other = (Usuario) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+        if ((this.idUsuario == null && other.idUsuario != null) || (this.idUsuario != null && !this.idUsuario.equals(other.idUsuario))) {
             return false;
         }
         return true;
@@ -112,7 +111,7 @@ public class Usuario implements Serializable {
 
     @Override
     public String toString() {
-        return "com.unitec.amil.Usuario[ id=" + id + " ]";
+        return "com.unitec.amil.Usuario[ idUsuario=" + idUsuario + " ]";
     }
     
 }
