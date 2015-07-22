@@ -1,0 +1,7 @@
+Hacer un formulario con un cuadro de texto en donde se ingresen °C y se convierta a °F y a °K
+
+Con un botón mostrará las 2 operaciones
+
+Fórmulas
+°F = (°C * 1.8) + 32
+°K = °C + 273.73
